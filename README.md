@@ -1,6 +1,6 @@
 # MissonToMars
 
-In this project, data is scrapped from several mars websites, inserted data into Mongo DB database and then data retrived from Mongo DB and displayed in web.
+In this project, data is scrapped from several mars websites (including mars twitter handle), inserted data into Mongo DB database and then data retrived from Mongo DB and displayed in web.
 
 # Web Data Sources
 <https://mars.nasa.gov/news> <br>
