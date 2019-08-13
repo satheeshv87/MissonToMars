@@ -1,4 +1,4 @@
-# MissonToMars
+# Misson To Mars
 
 In this project, data is scrapped from several mars websites (including mars twitter handle), inserted data into Mongo DB database and then data retrived from Mongo DB and displayed in web.
 
@@ -9,7 +9,7 @@ In this project, data is scrapped from several mars websites (including mars twi
 <https://space-facts.com/mars/> <br>
 <https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars>
 
-# Tech Stack Used:
+# Tech Stack
 - Beautiful Soup to scrap the web
 - Selenium splinter to navigate through web pages
 - Mongo Db NOSQL database to store the scraped data
