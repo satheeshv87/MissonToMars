@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1><strong>Mission to Mars</strong></h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+
+    <!-- Mars Latest News-->
+    <div class="row" id="Latest-News">
+      <div class="col-md-12">
+        <h3><strong>Latest Mars News</strong></h3>
+        <h4 class="heading">{{mars_record.news_title}}</h4>
+        <p>{{mars_record.news_paragraph}}</p>
+      </div>
+    </div>
+
+    <!-- Featured Images and Mars Facts-->
+    <div class="row" id="Feature-Image-Facts">
+        <div class="col-md-7">
+          <h3><strong>Mars Image</strong></h3>
+          <img src="{{mars_record.jpl_image_url}}" height="400" width="600">
+        </div>
+        <div class="col-md-5">
+          <div id="weather" style="border-style: solid; border-width: 1px;">
+            <h3><strong>Current Weather on Mars</strong></h3>
+            <p>{{mars_record.mars_weather}}</p>
+          </div>
+          <div id="facts">
+            <h3><strong>Mars Facts</strong></h3>
+              <table style="width:100%" border="1px">
+                  <tr>
+                    <th>Description</th>
+                    <th>Value</th> 
+                  </tr>
+                  <tr>
+                    <td>Equatorial Diameter</td>
+                    <td>{{mars_record.mars_fact["Equatorial Diameter"]}}</td> 
+                  </tr>
+                  <tr>
+                    <td>Polar Diameter</td>
+                    <td>{{mars_record.mars_fact["Polar Diameter"]}}</td> 
+                  </tr>
+                  <tr>
+                      <td>Mass</td>
+                      <td>{{mars_record.mars_fact["Mass"]}}</td> 
+                    </tr>    
+                    <tr>
+                        <td>Moons</td>
+                        <td>{{mars_record.mars_fact["Moons"]}}</td> 
+                    </tr>
+                    <tr>
+                        <td>Orbit Distance</td>
+                        <td>{{mars_record.mars_fact["Orbit Distance"]}}</td> 
+                    </tr>  
+                    <tr>
+                        <td>Orbit Period</td>
+                        <td>{{mars_record.mars_fact["Orbit Period"]}}</td> 
+                    </tr>              
+                    <tr>
+                        <td>Surface Temperature</td>
+                        <td>{{mars_record.mars_fact["Surface Temperature "]}}</td> 
+                    </tr>                                               
+                    <tr>
+                        <td>First Record</td>
+                        <td>{{mars_record.mars_fact["First Record"]}}</td> 
+                    </tr>                                        
+                    <tr>
+                        <td>Recorded By</td>
+                        <td>{{mars_record.mars_fact["Recorded By"]}}</td> 
+                    </tr>                                                                                                                                 
+                </table>
+
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Mars Hemisphere-->
+    <div class="row" style="margin-top:20px">
+        <div class="col-12" style="text-align: left">
+            <h3><strong>Mars Hemispheres</strong></h3>
+        </div>
+        <div class="row card-deck">
+            {% for item in mars_record.hemisphere %}
+            <div class="col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="{{ item.img_url }}" class="card-img-top" height="550" width="550">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: left"><strong>{{ item.title }}</strong></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>
