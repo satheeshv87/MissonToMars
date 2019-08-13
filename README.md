@@ -2,12 +2,12 @@
 
 In this project, data is scrapped from mars websites, inserted data into Mongo DB database, data retrived from Mongo DB and displayed in web.
 
-# Web Data Source
-https://mars.nasa.gov/news
-https://twitter.com/MarsWxReport
-https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
-https://space-facts.com/mars/
-https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars
+# Web Data Sources
+<https://mars.nasa.gov/news> <br>
+<https://twitter.com/MarsWxReport> <br>
+<https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars> <br>
+<https://space-facts.com/mars/> <br>
+<https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars>
 
 # Tech Stack Used:
 - Beautiful Soup to scrap the web
